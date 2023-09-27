@@ -4,7 +4,7 @@ in android official course,
 
 learn more about this course [https://developer.android.com/courses/android-basics-compose/course](here)
 ## OverView
-![/media/overview.gif]()
+![media/overview.gif]()
 
 ## What the app does?
 this app is a simulation for ordering food from a restaurant.
