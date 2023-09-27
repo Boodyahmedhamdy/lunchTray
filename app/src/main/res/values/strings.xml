@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">lunchTray</string>
+    <string name="lunch_tray">Lunch Tray</string>
+    <string name="start_order">Start Order</string>
+</resources>
