@@ -27,4 +27,35 @@ object DataSource {
         ),
     )
 
+
+    val sideDishes: List<LunchOptionUiState> = listOf(
+        LunchOptionUiState(
+            title = "Cum luna tolerare, omnes rumores imitari primus, pius gloses. ",
+            description = "Faith happens when you gain shame so substantially that whatsoever you are empowering is your tantra.",
+            price = 6.0
+        ),
+        LunchOptionUiState(
+            title = "pull",
+            description = "A falsis, exemplar talis aonides.",
+            price = 4.0
+        ),
+        LunchOptionUiState(
+            title = "rent",
+            description = "It is an ancient collision course, sir.",
+            price = 3.0
+        )
+    )
+
+    val accompaniments: List<LunchOptionUiState> = listOf(
+        LunchOptionUiState(
+            title = "invent",
+            description = "Sunt elevatuses carpseris velox, bi-color devirginatoes.",
+            price = 2.0
+        ),
+        LunchOptionUiState(
+            title = "behind",
+            description = "Cur canis trabem?",
+            price = 6.0
+        )
+    )
 }
