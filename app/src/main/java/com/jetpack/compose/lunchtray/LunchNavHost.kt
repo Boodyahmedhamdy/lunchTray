@@ -1,5 +1,9 @@
 package com.jetpack.compose.lunchtray
 
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
@@ -29,7 +33,21 @@ fun LunchNavHost(
         modifier = modifier
     ) {
         composable(
-            Screens.Start.name
+            Screens.Start.name,
+            enterTransition = {
+                slideInVertically(
+                    initialOffsetY = {
+                            fullHeight -> fullHeight / 2
+                    }
+                ) + fadeIn()
+            },
+            exitTransition = {
+                slideOutVertically(
+                    targetOffsetY = {
+                            fullHeight -> -fullHeight / 2
+                    }
+                ) + fadeOut()
+            }
         ) {
             StartOrderScreen(
                 onStartButtonClicked = {
@@ -38,7 +56,23 @@ fun LunchNavHost(
             )
         }
 
-        composable(Screens.Entree.name) {
+        composable(
+            Screens.Entree.name,
+            enterTransition = {
+                slideInVertically(
+                    initialOffsetY = {
+                            fullHeight -> fullHeight / 2
+                    }
+                ) + fadeIn()
+            },
+            exitTransition = {
+                slideOutVertically(
+                    targetOffsetY = {
+                            fullHeight -> -fullHeight / 2
+                    }
+                ) + fadeOut()
+            }
+        ) {
             EntreeScreen(
                 entreeOptions = DataSource.entreeOptions,
                 onNextButtonClicked = {
@@ -54,7 +88,23 @@ fun LunchNavHost(
             )
         }
 
-        composable(Screens.SideDish.name) {
+        composable(
+            Screens.SideDish.name,
+            enterTransition = {
+                slideInVertically(
+                    initialOffsetY = {
+                            fullHeight -> fullHeight / 2
+                    }
+                ) + fadeIn()
+            },
+            exitTransition = {
+                slideOutVertically(
+                    targetOffsetY = {
+                            fullHeight -> -fullHeight / 2
+                    }
+                ) + fadeOut()
+            }
+        ) {
             SideDishScreen(
                 sideDishes = DataSource.sideDishes,
                 onNextButtonClicked = {
@@ -70,7 +120,23 @@ fun LunchNavHost(
             )
         }
 
-        composable(Screens.Accompaniment.name) {
+        composable(
+            Screens.Accompaniment.name,
+            enterTransition = {
+                slideInVertically(
+                    initialOffsetY = {
+                        fullHeight -> fullHeight / 2
+                    }
+                ) + fadeIn()
+            },
+            exitTransition = {
+                slideOutVertically(
+                    targetOffsetY = {
+                        fullHeight -> -fullHeight / 2
+                    }
+                ) + fadeOut()
+            }
+        ) {
             AccompanimentScreen(
                 accompaniments = DataSource.accompaniments,
                 onNextButtonClicked = {
@@ -87,7 +153,23 @@ fun LunchNavHost(
             )
         }
 
-        composable(Screens.Checkout.name) {
+        composable(
+            Screens.Checkout.name,
+            enterTransition = {
+                slideInVertically(
+                    initialOffsetY = {
+                            fullHeight -> fullHeight / 2
+                    }
+                ) + fadeIn()
+            },
+            exitTransition = {
+                slideOutVertically(
+                    targetOffsetY = {
+                            fullHeight -> -fullHeight / 2
+                    }
+                ) + fadeOut()
+            }
+        ) {
             CheckoutScreen(
                 state = uiState.value,
                 onSubmitButtonClicked = {
