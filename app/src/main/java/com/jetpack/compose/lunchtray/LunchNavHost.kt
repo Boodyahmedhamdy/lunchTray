@@ -56,7 +56,7 @@ fun LunchNavHost(
 
         composable(Screens.SideDish.name) {
             SideDishScreen(
-                sideDishes = DataSource.entreeOptions,
+                sideDishes = DataSource.sideDishes,
                 onNextButtonClicked = {
                     navController.navigate(Screens.Accompaniment.name)
                     println("${viewModel.state.value}")
@@ -72,7 +72,7 @@ fun LunchNavHost(
 
         composable(Screens.Accompaniment.name) {
             AccompanimentScreen(
-                accompaniments = DataSource.entreeOptions,
+                accompaniments = DataSource.accompaniments,
                 onNextButtonClicked = {
                     println("${viewModel.state.value}")
                     viewModel.updateSubtotal()
